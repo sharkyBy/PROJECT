@@ -1,0 +1,19 @@
+@mixin title($fSz, $fWt) {
+    font-size: $fSz;
+    font-weight: $fWt;
+    user-select: none;
+};
+
+
+@mixin classContainer ($disp,$flxDir,$flxAlItem,$width,$maxWidth,$height,$mrg,$fntFam, $color) {
+    display: $disp;
+    flex-direction: $flxDir;
+    align-items: $flxAlItem;
+    width: $width;
+    max-width: $maxWidth;
+    height: $height;
+    margin: $mrg;
+    font-family: $fntFam;
+    color: $color;
+    
+}

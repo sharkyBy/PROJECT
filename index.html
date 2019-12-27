@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <script defer src="./js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <script defer src="https://kit.fontawesome.com/0582e294a7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/all.css">
+    
     <title>Project</title>
 </head>
 <body>
@@ -22,9 +23,12 @@
 
                 </div>
                 <div class="header__nav">
-                    <div class="header__nav-btn ">
-                        <span class = 'span'></span>                       
+                    <div class="header__nav-wrap">
+                        <div class="header__nav-btn ">
+                            <span></span>                       
+                        </div>
                     </div>
+                    
                     <div class="header__nav-menu">
                             <div class = "header__nav-menu-deActive"><a href="#about me">about me</a></div >
                             <div class = "header__nav-menu-deActive"><a href="#">education</a></div>
@@ -42,7 +46,60 @@
             
         </div>
     </header>
-    <main></main>
+    <main class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__photo">
+                    <div class = "main__photo-border"></div>
+                    <div class = "main__photo-bgd"><img src="./img/about.jpg" alt=""></div>
+                    <!-- <input type="button" value="Download Resume"> -->
+                </div>
+
+                <section class="main__aboutMe">
+                    <h1>ABOUT ME</h1>
+                    <p>
+                        Hello! I’m Oliver Queen. Web Developer with over 8 years of experience. 
+                        Experienced with all stages of the development cycle for dynamic web projects. 
+                        Having an in-depth knowledge including advanced HTML5, CSS3, JavaScript, jQuery, 
+                        Angular JS. Strong background in management and leadership.
+                    </p>
+                    <h6>NAME:<span>&nbsp;Oliver Queen</span></h6> 
+                    <h6>DATE OF BIRTH:<span>&nbsp;14 February 1986</span></h6>
+                    <h6>NATIONALITY:<span>&nbsp;Citizen of Envato</span></h6>
+                    <h6>ADDRESS:<span>&nbsp;23 High Hope Blvd., Some City, Some Country</span></h6>
+                    <h6>PHONE:<span>&nbsp;(123)-456-7890,(123)-456-7891</span></h6>
+                    <h6>EMAIL:<span> &nbsp;  oliver.queen@jaina.com</span></h6>
+                    
+                </section>
+                <section class="main__myInterests">
+                    <h1>MY INTERESTS </h1>
+                   <div class = "main__myInterests-icon">
+                       <div><i class="fas fa-futbol"></i></div>
+                       <span>Futbol</span>
+                   </div>
+                   <div class = "main__myInterests-icon">
+                       <div><i class="fas fa-laptop"></i></div>
+                       <span>Computers</span>
+                   </div>
+                   <div class = "main__myInterests-icon">
+                       <div><i class="fab fa-itunes-note"></i></div>
+                       <span>Music</span>
+                   </div>
+                   <div class = "main__myInterests-icon">
+                       <div><i class="fas fa-coffee"></i></div>
+                       <span>Coffe</span>
+                   </div>
+                   <div class = "main__myInterests-icon">
+                       <div><i class="fas fa-globe"></i></div>
+                       <span>Travel</span>
+                   </div>                   
+
+                </section>
+            </div> <!-- main__wrapper -->
+        </div>  <!-- container -->
+
+    </main>
+
     <footer></footer>
 </body>
 </html>
