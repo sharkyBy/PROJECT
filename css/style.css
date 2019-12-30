@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,9 +62,11 @@
   padding: 18px 0 0 20px;
   user-select: none;
 }
+.header__social a {
+  color: inherit;
+}
 .header__social .fab {
   margin-right: 20px;
-  cursor: pointer;
   font-size: 24px;
 }
 .header__social .fab:hover {
@@ -115,10 +118,13 @@
   margin-top: 13px;
   width: 30px;
   height: 3px;
-  background-color: white;
-  transition: 0.1s linear;
+  background: white;
+  transition: background 0.2s linear;
 }
 
+.header__nav-btn-active span {
+  background: transparent;
+}
 .header__nav-btn-active::before {
   transform: rotate(45deg);
   top: 13.5px;
@@ -148,6 +154,7 @@
   width: 260px;
   height: 30px;
   transform-origin: 100% 50%;
+  transition: visibility linear 1s;
 }
 .header__nav-menu-active:nth-child(2) {
   transform: rotate(-25deg);
@@ -524,6 +531,40 @@ section:last-of-type .border {
   max-width: 1140px;
   margin: 0 auto;
   height: auto;
+  position: relative;
+}
+
+.skills {
+  width: 200px;
+  height: 40px;
+}
+
+.scale {
+  width: 200px;
+  height: 6px;
+  background: #22252c;
+}
+.scale div {
+  display: block;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, #1ad799 0%, #2febe2 100%);
+  position: relative;
+}
+.scale div::before {
+  position: absolute;
+  top: -30px;
+  left: 90%;
+  font-size: 14px;
+  content: "60%";
+}
+.scale div:after {
+  position: absolute;
+  top: -8px;
+  left: 90%;
+  font-size: 16px;
+  content: "";
+  font-family: "Font Awesome";
 }
 
 /*# sourceMappingURL=style.css.map */

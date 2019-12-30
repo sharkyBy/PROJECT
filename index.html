@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <script defer src="./js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="./webfonts/">
+    <link rel="stylesheet" href="./font/css/all.min.css">
+    <link rel="stylesheet" href="/font/webfonts/">
     
     <title>Project</title>
 </head>
@@ -17,12 +17,14 @@
         <div class="header__container">
             <div class="nav" >
                 <div class="header__social">
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-telegram-plane"></i>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-viber"></i>
+                    <a href="https://twitter.com/?lang=ru" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://telegram.org/" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.viber.com/ru/" target="_blank"><i class="fab fa-viber"></i></a>
+                    
+                    
+                </div> <!-- header__social -->
 
-                </div>
                 <div class="header__nav">
                     <div class="header__nav-wrap">
                         <div class="header__nav-btn ">
@@ -31,12 +33,14 @@
                     </div>
                     
                     <div class="header__nav-menu">
-                            <div class = "header__nav-menu-deActive"><a href="#aboutMe">about me</a></div >
-                            <div class = "header__nav-menu-deActive"><a href="#education">education</a></div>
-                            <div class = "header__nav-menu-deActive"><a href="#">work experience</a></div>
-                            <div class = "header__nav-menu-deActive"><a href="#">contact me</a></div>
-                        </div>
-                </div>
+                        <div class = "header__nav-menu-deActive"><a href="#aboutMe">about me</a></div >
+                        <div class = "header__nav-menu-deActive"><a href="#education">education</a></div>
+                        <div class = "header__nav-menu-deActive"><a href="#work">work experience</a></div>
+                        <div class = "header__nav-menu-deActive"><a href="#">contact me</a></div>
+                    </div>
+
+                </div> <!-- header__nav -->
+
             </div> <!-- .nav -->
             
             <div class="header__title">
@@ -262,7 +266,12 @@
             <div class="container bg-gray">
                 <div class="main__row4_profSkill">
                     <h1 class="main__row-title">PROFESSIONAL SKILLS</h1>
-            </div>
+                    <div class="skills">
+                       <div class="scale"><div></div></div>
+
+                    </div>
+                </div> <!--main__row4_profSkill  -->
+            </div> <!-- container -->
         </section>
 
 

@@ -61,11 +61,13 @@
     height: 100%;        
     padding: 18px 0 0 20px;                        
     user-select: none; 
+    a{
+        color:inherit;
+    }
          
         
     .fab{
-        margin-right: 20px;
-        cursor: pointer;
+        margin-right: 20px;        
         font-size: 24px;
         
                 
@@ -84,6 +86,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    
     
 }       
 
@@ -129,15 +133,19 @@
         margin-top: 13px;    
         width: 30px;   
         height: 3px;    
-        background-color: white;
-        transition: 0.1s linear;    
+        background: white;
+        transition:background .2s linear;    
     }
    
 }
 
 
-.header__nav-btn-active{   
-
+.header__nav-btn-active{  
+    
+    span{
+        background:transparent;         
+    }    
+    
     &::before{
         transform: rotate(45deg);
         top: 13.5px;
@@ -169,6 +177,7 @@
     width: 260px;
     height: 30px;
     transform-origin: 100% 50%;
+    transition:   visibility  linear 1s;
 
     &:nth-child(2){
         transform: rotate(-25deg);
@@ -610,6 +619,45 @@ section:last-of-type .border{
 .main__row4_profSkill{
     @include classRow (flex,column wrap,100%, 1140px, 0 auto);   
     height: auto;
-    
+    position: relative;
 }
 
+.skills{
+    width: 200px;
+    height: 40px;
+    // border: 1px solid red;
+
+    
+
+}
+
+.scale{
+        
+    width: 200px;
+    height: 6px;
+    background: $bgd-row2;
+    div{
+        display:block;
+        width: 60%;
+        height: 100%;
+        background: $bgd-row1;
+        position: relative;
+
+        &::before{
+            position: absolute;
+            top: -30px;
+            left: 90%;
+            font-size: 14px;
+            content: "60%";
+        }
+        &:after{
+            position: absolute;
+            top: -8px;
+            left: 90%;
+            font-size: 16px;
+            content: "\f111";
+            font-family: 'Font Awesome';
+        }
+    }
+
+}
