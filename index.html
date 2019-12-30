@@ -8,13 +8,14 @@
     <script defer src="./js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./webfonts/">
     
     <title>Project</title>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="nav" name = "#about me">
+        <div class="header__container">
+            <div class="nav" >
                 <div class="header__social">
                     <i class="fab fa-twitter"></i>
                     <i class="fab fa-telegram-plane"></i>
@@ -30,8 +31,8 @@
                     </div>
                     
                     <div class="header__nav-menu">
-                            <div class = "header__nav-menu-deActive"><a href="#about me">about me</a></div >
-                            <div class = "header__nav-menu-deActive"><a href="#">education</a></div>
+                            <div class = "header__nav-menu-deActive"><a href="#aboutMe">about me</a></div >
+                            <div class = "header__nav-menu-deActive"><a href="#education">education</a></div>
                             <div class = "header__nav-menu-deActive"><a href="#">work experience</a></div>
                             <div class = "header__nav-menu-deActive"><a href="#">contact me</a></div>
                         </div>
@@ -46,57 +47,228 @@
             
         </div>
     </header>
+
+
+    
     <main class="main">
-        <div class="container">
-            <div class="main__wrapper">
-                <div class="main__photo">
-                    <div class = "main__photo-border"></div>
-                    <div class = "main__photo-bgd"><img src="./img/about.jpg" alt=""></div>
-                    <!-- <input type="button" value="Download Resume"> -->
-                </div>
+        <section class="section">
+            <div class="container bg-dark">
+                <div class="main__row1_aboutMe">
+                    <div class="main__photo">
+                        <div class="main__photo-border"></div>
+                        <div class="main__photo-bgd"><img src="./img/about.jpg" alt=""></div>
+                        <!-- <input type="button" value="Download Resume"> -->
+                    </div>
+    
+                    <section class="main__aboutMe">
+                        <h1 id="aboutMe" class="main__row-title">ABOUT ME</h1>
+                        <p>
+                            Hello! I’m Oliver Queen. Web Developer with over 8 years of experience.
+                            Experienced with all stages of the development cycle for dynamic web projects.
+                            Having an in-depth knowledge including advanced HTML5, CSS3, JavaScript, jQuery,
+                            Angular JS. Strong background in management and leadership.
+                        </p>
+                        <h6>NAME:<span>&nbsp;Oliver Queen</span></h6>
+                        <h6>DATE OF BIRTH:<span>&nbsp;14 February 1986</span></h6>
+                        <h6>NATIONALITY:<span>&nbsp;Citizen of Envato</span></h6>
+                        <h6>ADDRESS:<span>&nbsp;23 High Hope Blvd., Some City, Some Country</span></h6>
+                        <h6>PHONE:<span>&nbsp;(123)-456-7890,(123)-456-7891</span></h6>
+                        <h6>EMAIL:<span> &nbsp; oliver.queen@jaina.com</span></h6>
+    
+                    </section>
+                    <section class="main__myInterests">
+                        <h1>MY INTERESTS </h1>
+                        <div class="main__myInterests-icon">
+                            <div><i class="fas fa-futbol"></i></div>
+                            <span>Futbol</span>
+                        </div>
+                        <div class="main__myInterests-icon">
+                            <div><i class="fas fa-laptop"></i></div>
+                            <span>Computers</span>
+                        </div>
+                        <div class="main__myInterests-icon">
+                            <div><i class="fab fa-itunes-note"></i></div>
+                            <span>Music</span>
+                        </div>
+                        <div class="main__myInterests-icon">
+                            <div><i class="fas fa-coffee"></i></div>
+                            <span>Coffe</span>
+                        </div>
+                        <div class="main__myInterests-icon">
+                            <div><i class="fas fa-globe"></i></div>
+                            <span>Travel</span>
+                        </div>
+    
+                    </section> <!-- main__myInterests -->
+                </div> <!-- main__row1 -->
+            </div> <!-- container -->
+    
+        </section> <!-- end of class  "section" -->
 
-                <section class="main__aboutMe">
-                    <h1>ABOUT ME</h1>
-                    <p>
-                        Hello! I’m Oliver Queen. Web Developer with over 8 years of experience. 
-                        Experienced with all stages of the development cycle for dynamic web projects. 
-                        Having an in-depth knowledge including advanced HTML5, CSS3, JavaScript, jQuery, 
-                        Angular JS. Strong background in management and leadership.
-                    </p>
-                    <h6>NAME:<span>&nbsp;Oliver Queen</span></h6> 
-                    <h6>DATE OF BIRTH:<span>&nbsp;14 February 1986</span></h6>
-                    <h6>NATIONALITY:<span>&nbsp;Citizen of Envato</span></h6>
-                    <h6>ADDRESS:<span>&nbsp;23 High Hope Blvd., Some City, Some Country</span></h6>
-                    <h6>PHONE:<span>&nbsp;(123)-456-7890,(123)-456-7891</span></h6>
-                    <h6>EMAIL:<span> &nbsp;  oliver.queen@jaina.com</span></h6>
+
+        <section class="section">
+            <div class="container bg-gray">
+                <div class="main__row2_education">
+                    <h1 id="education" class="main__row-title">EDUCATION</h1>
+                    <div class="circle"><i class="fas fa-graduation-cap"></i></div>
+        
+                    <div class='border-top-bottom'></div>
+        
+                    <div class="main__row2-tree">
+        
+        
+                        <section class="main__row2-tree-section">
+                            <div class="section-item1">
+                                <h2> BAHCALOR DIGREE</h2>
+                                <span> JAN 2009 - MAY 2010 | DEFODIL UNIVERSITY</span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+                            <div class="section-item2">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='border'></div>
+        
+                        <section class="main__row2-tree-section">
+                            <div class="section-item1 reverce1">
+                                <h2> MASTER DIGREE</h2>
+                                <span> ABRDER UNIVERSITY | FEB 2011 - MAR 2012</span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+                            <div class="section-item2 reverce-1">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='border'></div>
+        
+                        <section class="main__row2-tree-section">
+                            <div class="section-item1">
+                                <h2>UX DESIGNER COURSE</h2>
+                                <span> JUN 2012 - MAY 2013 | CRAFTY UNIVERSITY</span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+                            <div class="section-item2">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='border'></div>
+        
+                        <section class="main__row2-tree-section">
+                            <div class="section-item1 reverce1">
+                                <h2> INTERFACE DESIGNING</h2>
+                                <span> KHELTAM UNIVERSITY | AUG 2014 - JUN 2015</span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+                            <div class="section-item2 reverce-1">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='border-top-bottom'></div>
+        
+                        <div class="main__end-tree"></div>
+        
+                    </div><!-- main__row2-tree -->
+                </div><!-- main__row2_education -->
+            </div> <!-- container -->
+        </section> <!-- end of class "section" -->
+
+
+        
+        <section class="section">
+            <div class="container bg-dark">
+                <div class="main__row3_work">
+                    <h1 class="main__row-title">WORK EXPERIENCE</h1>
+                    <div class="main__row3_top-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="row3__wrapper">
+                        <ul class = "left-tree">
+                            <li>
+                                <h2>GRAFICS DESIGNER </h2>
+                                <span>JAN 2009 - MAY 2010 | CREATIVE ALIEN</span>
+                                <div class="icon"><i class="far fa-dot-circle"></i></div>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                                <div class="icon"><i class="far fa-dot-circle"></i></div>
+                            </li>
+                            <li>
+                                <h2>UI / UX DESIGNER</h2>
+                                <span>JUN 2012 - MAY 2013 | CREATIVE ALIEN</span>
+                                <div class="icon"><i class="far fa-dot-circle"></i></div>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                                <div class="icon"><i class="far fa-dot-circle"></i></div>
+                            </li>
+                            
+                        </ul> <!-- left-tree -->
+    
+    
+                        <ul class="right-tree">
+                            <li>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                            </li>
+                            <li>
+                                <h2>INTERACTION DESIGNER</h2>
+                                <span>CRAFTY DESIGNS | FEB 2011 - MAR 2012</span></i>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
+                                    doloremque impedit numquam. Nam cupiditate illo earum.
+                                </p>
+                                </li>
+                            <li>
+                                <h2>CREATIVE DIRECTIVE</h2>
+                                <span>DIVERGENT STUDIO | AUG 2014 - JUN 2015</span>
+                            </li>
+                            
+                        </ul> <!-- right-tree -->                   
                     
-                </section>
-                <section class="main__myInterests">
-                    <h1>MY INTERESTS </h1>
-                   <div class = "main__myInterests-icon">
-                       <div><i class="fas fa-futbol"></i></div>
-                       <span>Futbol</span>
-                   </div>
-                   <div class = "main__myInterests-icon">
-                       <div><i class="fas fa-laptop"></i></div>
-                       <span>Computers</span>
-                   </div>
-                   <div class = "main__myInterests-icon">
-                       <div><i class="fab fa-itunes-note"></i></div>
-                       <span>Music</span>
-                   </div>
-                   <div class = "main__myInterests-icon">
-                       <div><i class="fas fa-coffee"></i></div>
-                       <span>Coffe</span>
-                   </div>
-                   <div class = "main__myInterests-icon">
-                       <div><i class="fas fa-globe"></i></div>
-                       <span>Travel</span>
-                   </div>                   
+                    </div> <!-- ro3__wrapper -->
+    
+                    <div class="main__end-tree"></div>
+    
+                </div> <!-- /main__row3_work -->
+            </div> <!-- /container -->
+        </section> <!-- end of class "section" -->
 
-                </section>
-            </div> <!-- main__wrapper -->
-        </div>  <!-- container -->
+
+        <section class="section">
+            <div class="container bg-gray">
+                <div class="main__row4_profSkill">
+                    <h1 class="main__row-title">PROFESSIONAL SKILLS</h1>
+            </div>
+        </section>
+
+
+
+
+
 
     </main>
 

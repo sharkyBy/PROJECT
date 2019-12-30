@@ -1,16 +1,9 @@
 // ** Mixins ******
 
 @import '_mixin';
+@import '_variables';
 
 
-// ** Variables__
-//             __font-family
-$fntFam: 'Open Sans', sans-serif;
-
-//              __background
-$bgd-row1: linear-gradient(90deg, rgba(26,215,153,1) 0%, rgba(47,235,226,1) 100%);
-$bgd-row2: rgba(34,37,44,1);
-$bgd-row3: rgba(49,55,65,1);
 
 *{
     box-sizing: border-box;
@@ -25,39 +18,38 @@ $bgd-row3: rgba(49,55,65,1);
     max-width: 1400px;
     width: 100%;
     min-width: 300px;
-    max-height: 800px;
-    height: 100vh;  
+      
     color: white;
     background-blend-mode: soft-light; //смешивание слоев
-    background: url(../img/img1.png), $bgd-row1;
+    background: url(../img/img1.png) , $bgd-row1;
     background-size: cover;
-    
+}    
 
-    .container{
-        @include classContainer(flex, column, center, 100%, 1140px, auto, 0 auto ,$fntFam, rgba(255, 255, 255,1));
-        min-height: 800px;
-        min-width: inherit;
-    }
+.header__container{
+    @include classHeaderContainer(flex, column wrap, flex-start, center, 100%, 1140px, 0 auto ,$fntFam, $colorTitle2);
+      
 }
 
+
 .header__title{
-    margin-top: 180px;
+    margin: 18vw 0;
     h1{
-        @include title(120px,400); 
+        @include title(13vw,400); 
             
                   
     }
     h2{
-        @include title(90px,700);
+        @include title(8vw,700);
           
     }
     h4{
-        @include title(28px,300);          
+        @include title(4vw,300);          
     }                
 }
     
 .nav{
-    max-width:1200px;
+    position: sticky;
+    top: 0;
     width: 100%;    
     height: 60px;            
     display: flex;
@@ -65,15 +57,17 @@ $bgd-row3: rgba(49,55,65,1);
 }       
 
 .header__social{
-    width: 50%;       
+    flex: 1 1 0;    
     height: 100%;        
-    padding: 18px 0;                        
-    user-select: none;       
+    padding: 18px 0 0 20px;                        
+    user-select: none; 
+         
         
     .fab{
         margin-right: 20px;
         cursor: pointer;
         font-size: 24px;
+        
                 
         &:hover{
             color: rgb(250, 250, 60);
@@ -85,8 +79,8 @@ $bgd-row3: rgba(49,55,65,1);
 
 .header__nav{
     position: relative;
-    width: 50%;
-    height: 100%;                       
+    flex: 1 1 0; 
+    // height: 100%;                       
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -100,8 +94,8 @@ $bgd-row3: rgba(49,55,65,1);
     width: 40px;
     height: 30px;                                      
     position: absolute;
-    cursor: pointer;
-    right: 0;
+    cursor: pointer;  
+    right: 20px;
     top:15px;    
    
     &::before{
@@ -206,45 +200,48 @@ $bgd-row3: rgba(49,55,65,1);
         
 
 
-//  *******************  block 1 ********************
-//  -- variables
-//flex, column, center, 100%, 1140px, 800px, auto 0,'Open Sans, sans-serif',`linear-gradient(90deg, rgba(26,215,153,1) 0%, rgba(47,235,226,1) 100%)`
+//  *******************  About Me ********************
+
 .main{
-    background: $bgd-row2;
+   
     width: 100%;
     max-width: 1400px;
     min-width: 300px;
-    height: auto;
-    // $color: rgba(26,215,153,1);
-
-    .container{
-        @include classContainer(flex, row, Start, 100%, 1140px, auto, 0 auto , $fntFam,rgba(255, 255, 255,.7));        
-        font-family: $fntFam; 
-        user-select: none;     
-    }
+    height: auto;    
+}    
+.container{
+        @include classContainer(100%, 100%, auto, $fntFam, $colorText);        
+        user-select: none;        
+            
 }
-.main__wrapper{
-    display: flex;
-    flex-flow: row wrap;
+
+.bg-dark{
+    background: $bgd-row2;
+}
+
+.main__row1_aboutMe{
+    @include classRow (flex,row wrap,100%, 1140px, 0 auto);
+    
 }
         
 .main__photo{
-    flex: 1 1 50%;        
+    flex: 1 1 0;        
     position: relative;       
-    margin-top: 190px;
+    margin-top: 160px;
 }       
 
 .main__photo-border{
-    display: block;
-    max-width: 66%;
-    min-width:250px ;
-    max-height: 374px;
-    min-height: 300px; 
-    height: 100%;              
+    
+    width: 66%;              //устанавливаем соотношение сторон при респонсиве
+    min-width: 240px;
+    min-height: 240px;
+    padding-top: 66%;        //устанавливаем соотношение сторон при респонсиве  
+              
     border: 4px solid rgba(26,215,153,1);
     margin-left: 50px;
     z-index: 1;
 }
+
 .main__photo-bgd{
     position: absolute;
     top: 38px;
@@ -255,7 +252,7 @@ $bgd-row3: rgba(49,55,65,1);
 
     img{
         display: block;
-        min-width: 300px;
+        min-width: 250px;
         width: 100%;
         height: auto;
     }
@@ -264,18 +261,9 @@ $bgd-row3: rgba(49,55,65,1);
     
 
 .main__aboutMe{
-    margin: 170px 0;
-    flex: 1 1 50%;          
-    min-width: 300px;  
-    h1{
-        display: inline;            
-        font-size: 45px;
-        font-weight: 700;           
-        background:$bgd-row1;                        // background color;
-        -webkit-background-clip: text;               // background color only for text
-        -webkit-text-fill-color: transparent;        // fill color characters of text - transparent  
-            
-    }
+    margin: 140px 0;
+    flex: 1 1 0;          
+    min-width: 300px;     
 
     p{
         margin-top:30px;
@@ -290,11 +278,24 @@ $bgd-row3: rgba(49,55,65,1);
             
     span{
         font-weight: 300;
-        color: rgba(255, 255, 255,.7);
+        color: $colorText;
     }
     }
 
 } // about me
+
+
+
+.main__row-title{
+    display: inline;
+    margin: 140px auto;            
+    font-size: 45px;
+    font-weight: 700;           
+    background:$bgd-row1;                        // background color;
+    -webkit-background-clip: text;               // background color only for text
+    -webkit-text-fill-color: transparent;        // fill color characters of text - transparent  
+        
+}
     
 .main__myInterests{
     width: 80%;
@@ -312,7 +313,7 @@ $bgd-row3: rgba(49,55,65,1);
     .fas, 
     .fab{
         font-size: 40px;
-        color: rgba(26,215,153,1);
+        color:$colorTitle1;
         transition: 0.35s color;
     }  
 
@@ -331,14 +332,14 @@ $bgd-row3: rgba(49,55,65,1);
             transition: background .35s linear;
             
             &:hover{
-                background: rgba(26,215,153,0.6);
+                background: $bgd-row1;
                 transition:  .3s linear ;               
             }            
            
             &:hover ~span,  &:hover i{
                 opacity: 1;
                 visibility: visible;
-                color: rgb(255, 255, 255,.7);
+                color: $colorText;
                 transition:  all 0.35s  linear,;
                 
             }
@@ -358,4 +359,257 @@ $bgd-row3: rgba(49,55,65,1);
     } //main__myInterests-icon  
 
 }// main__myInterests
+
+// *************  row 2 Education ***********
+
+.bg-gray{
+    background: $bgd-row3;
+}
+.main__row2_education{
+    @include classRow (flex,column wrap,100%, 1140px, 0 auto);   
+    height: auto;
+    
+}
+
+.circle{
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid $colorText2;
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: $bgd-row3;
+    z-index: 2;
+    
+
+    .fas, 
+    .fab{            
+        font-size: 32px;
+        color:$colorText2;
+        
+    }  
+}
+
+.border-top-bottom{
+    width:3px;
+    height: 100px;    
+    background:$colorText2;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.border{
+    width:3px;
+    height: 150px;    
+    background:$colorText2;
+    z-index: 1;
+}
+
+
+
+.main__row2-tree{
+   
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;   
+    
+}
+
+
+.main__row2-tree-section{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 0;    
+    
+    .center{            
+        background: $bgd-row3;
+        z-index: 2;
+                        
+        .far{
+            font-size: 32px;
+            color:$colorText2;
+            
+        }
+        
+    }      
+    
+}
+.section-item1{
+    flex: 1 1 0;       
+    padding: 0 15px;
+    line-height: 1.5;
+    text-align: right;       
+
+    h2{
+        color: $colorText2;           
+    }
+       
+}
+   
+.section-item2{
+    flex: 1 1 0;        
+    padding: 0 15px;        
+    font-size: 14px;
+    line-height: 1.5;
+    text-align:left; 
+              
+}
+
+.reverce1{
+    order: 1; 
+    text-align:left; 
+}
+    
+.reverce-1{
+    text-align: right;
+    order:-1;
+} 
+
+.main__end-tree{
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $colorText2;
+    border-radius: 50%;
+    background: $colorText2;
+    margin-bottom: 120px;
+}
+
+
+
+section:last-of-type .border{
+    height: 250px;
+}
+
+// ****** row 3  WORK **********************************
+.main__row3_work{
+    @include classRow (flex,column wrap,100%, 1140px, 0 auto);   
+    
+   
+    h1{
+        display: inline-block;
+        margin: 140px auto;            
+        font-size: 45px;
+        font-weight: 700;           
+        background:$bgd-row1;                        // background color;
+        -webkit-background-clip: text;               // background color only for text
+        -webkit-text-fill-color: transparent;        // fill color characters of text - transparent  
+            
+    }
+}
+.main__row3_top-icon{
+        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 3px solid $colorText2;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            
+        .fas, 
+        .fab{            
+            font-size: 32px;
+            color:$colorText2;
+            
+        }  
+    
+}
+.row3__wrapper{
+    margin: 0 auto;   
+    display: flex;
+    width: 80%;
+    height: 680px;
+    
+
+
+    .left-tree, .right-tree{
+        height: 100%;      
+        flex: 1 1 0;
+        list-style: none;
+        
+        position: relative;
+        
+        
+       h2{
+           color: $colorText2;
+       }
+       p{
+           font-size: 14px;
+           font-weight: 300;
+       }
+               
+        li:first-of-type{
+            top: 100px;
+            
+        }
+
+        li:nth-of-type(2){
+            top: 250px;
+        }
+
+        li:nth-of-type(3){
+            top: 400px;
+        }
+
+        li:last-of-type{
+            top: 550px;
+        }
+                
+        li{
+            width: 90%;
+            position: absolute;            
+        }
+    }
+
+    .left-tree{
+        border-right: 3px solid $colorText2;
+        li{            
+            text-align: right;
+            padding-right: 30px;
+            right:  0px;
+        }      
+        
+    }
+
+    .icon{        
+        position: absolute;
+        top: 0;
+        right: -17px;
+      
+         
+        .far{  
+                           
+            font-size: 32px;
+            color:$colorText2;
+            background: $bgd-row2;
+            z-index: 1;           
+        }          
+    }
+
+    .right-tree{   
+       
+        li{
+            text-align: left;
+            padding-left: 30px;
+        }
+    }
+
+} /* row3__wrapper */
+
+
+.main__row4_profSkill{
+    @include classRow (flex,column wrap,100%, 1140px, 0 auto);   
+    height: auto;
+    
+}
 

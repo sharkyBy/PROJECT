@@ -5,15 +5,34 @@
 };
 
 
-@mixin classContainer ($disp,$flxDir,$flxAlItem,$width,$maxWidth,$height,$mrg,$fntFam, $color) {
+@mixin classHeaderContainer ($disp, $flxFlow, $flxJustCont,$flxAlItem ,$width, $maxWidth,$mrg,$fntFam, $color){
     display: $disp;
-    flex-direction: $flxDir;
+    flex-flow: $flxFlow;
+    justify-content: $flxJustCont;
     align-items: $flxAlItem;
     width: $width;
+    max-width: $maxWidth;   
+    margin: $mrg; 
+    font-family: $fntFam;   
+    color: $color;  
+} 
+
+@mixin classContainer ($width, $maxWidth, $height, $fntFam,  $color) {
+    width: $width;
     max-width: $maxWidth;
-    height: $height;
-    margin: $mrg;
-    font-family: $fntFam;
+    height: $height;    
+    font-family: $fntFam;    
     color: $color;
+    
+}
+
+
+@mixin classRow ($disp, $flxFlow, $width, $maxWidth, $mrg) {
+    display: $disp;
+    flex-flow: $flxFlow;    
+    width: $width;
+    max-width: $maxWidth;   
+    margin: $mrg;    
+    
     
 }
