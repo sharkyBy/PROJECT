@@ -13,13 +13,13 @@
     <title>Project</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__container">
             <div class="nav" >
                 <div class="header__social">
-                    <a href="https://twitter.com/?lang=ru" target="_blank"><i class="fab fa-twitter"></i></a>
+                    
                     <a href="https://telegram.org/" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100011712913260" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.viber.com/ru/" target="_blank"><i class="fab fa-viber"></i></a>
                     
                     
@@ -33,10 +33,11 @@
                     </div>
                     
                     <div class="header__nav-menu">
-                        <div class = "header__nav-menu-deActive"><a href="#aboutMe">about me</a></div >
-                        <div class = "header__nav-menu-deActive"><a href="#education">education</a></div>
-                        <div class = "header__nav-menu-deActive"><a href="#work">work experience</a></div>
-                        <div class = "header__nav-menu-deActive"><a href="#">contact me</a></div>
+                        <div class = ""><a href="#aboutMe">Обо мне</a></div >
+                        <div class = ""><a href="#education">Образование</a></div>
+                        <div class = ""><a href="#work">Опыт работы</a></div>
+                        <div class = ""><a href="#skills">Навыки</a></div>
+                        <div class = ""><a href="#">Контакт</a></div>
                     </div>
 
                 </div> <!-- header__nav -->
@@ -44,9 +45,9 @@
             </div> <!-- .nav -->
             
             <div class="header__title">
-                <h1>Hello!</h1>
-                <h2>I’m Oliver Queen</h2>
-                <h4>Web & Interface Designer</h4>
+                <h1>Привет!</h1>
+                <h2>Меня зовут Валентин</h2>
+                <h4>Строительное проектировани, веб разработка</h4>
             </div>
             
         </div>
@@ -56,16 +57,16 @@
     
     <main class="main">
         <section class="section">
-            <div class="container bg-dark">
-                <div class="main__row1_aboutMe">
-                    <div class="main__photo">
-                        <div class="main__photo-border"></div>
-                        <div class="main__photo-bgd"><img src="./img/about.jpg" alt=""></div>
+            <div class="container container_bgd-dark">
+                <div class="aboutMe" id="aboutMe">
+                    <div class="aboutMe__photo">
+                        <div class="aboutMe__photo-border"></div>
+                        <div class="aboutMe__photo-bgd"><img src="./img/about.jpg" alt=""></div>
                         <!-- <input type="button" value="Download Resume"> -->
                     </div>
     
-                    <section class="main__aboutMe">
-                        <h1 id="aboutMe" class="main__row-title">ABOUT ME</h1>
+                    <section class="aboutMe__section_aboutMe">
+                        <h1  class="container__title">ABOUT ME</h1>
                         <p>
                             Hello! I’m Oliver Queen. Web Developer with over 8 years of experience.
                             Experienced with all stages of the development cycle for dynamic web projects.
@@ -80,55 +81,56 @@
                         <h6>EMAIL:<span> &nbsp; oliver.queen@jaina.com</span></h6>
     
                     </section>
-                    <section class="main__myInterests">
+                    <section class="aboutMe__myInterests">
                         <h1>MY INTERESTS </h1>
-                        <div class="main__myInterests-icon">
+                        <div class="aboutMe__myInterests-icon">
                             <div><i class="fas fa-futbol"></i></div>
-                            <span>Futbol</span>
+                            <span>Football</span>
                         </div>
-                        <div class="main__myInterests-icon">
+                        <div class="aboutMe__myInterests-icon">
                             <div><i class="fas fa-laptop"></i></div>
                             <span>Computers</span>
                         </div>
-                        <div class="main__myInterests-icon">
+                        <div class="aboutMe__myInterests-icon">
                             <div><i class="fab fa-itunes-note"></i></div>
                             <span>Music</span>
                         </div>
-                        <div class="main__myInterests-icon">
+                        <div class="aboutMe__myInterests-icon">
                             <div><i class="fas fa-coffee"></i></div>
                             <span>Coffe</span>
                         </div>
-                        <div class="main__myInterests-icon">
+                        <div class="aboutMe__myInterests-icon">
                             <div><i class="fas fa-globe"></i></div>
                             <span>Travel</span>
                         </div>
     
-                    </section> <!-- main__myInterests -->
-                </div> <!-- main__row1 -->
+                    </section> <!-- aboutMe__myInterests -->
+                </div> <!--aboutMe -->
             </div> <!-- container -->
     
-        </section> <!-- end of class  "section" -->
+        </section> <!--section aboutMe -->
 
 
         <section class="section">
-            <div class="container bg-gray">
-                <div class="main__row2_education">
-                    <h1 id="education" class="main__row-title">EDUCATION</h1>
+            <div class="container container_bgd-gray">
+                <div class="education" id="education" >
+                    <h1 class="container__title">ОБРАЗОВАНИЕ</h1>
+
                     <div class="circle"><i class="fas fa-graduation-cap"></i></div>
         
                     <div class='border-top-bottom'></div>
         
-                    <div class="main__row2-tree">
+                    <div class="education__tree">        
         
-        
-                        <section class="main__row2-tree-section">
-                            <div class="section-item1">
+                        <section class="education__section">
+                            <div class="education__item1">
                                 <h2> BAHCALOR DIGREE</h2>
                                 <span> JAN 2009 - MAY 2010 | DEFODIL UNIVERSITY</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
-                            <div class="section-item2">
+
+                            <div class="education__item2">
                                 <p>
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
                                     doloremque impedit numquam. Nam cupiditate illo earum.
@@ -138,14 +140,14 @@
         
                         <div class='border'></div>
         
-                        <section class="main__row2-tree-section">
-                            <div class="section-item1 reverce1">
+                        <section class="education__section">
+                            <div class="education__item1 education__item1_reverce">
                                 <h2> MASTER DIGREE</h2>
                                 <span> ABRDER UNIVERSITY | FEB 2011 - MAR 2012</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
-                            <div class="section-item2 reverce-1">
+                            <div class="education__item1 education__item2_reverce">
                                 <p>
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
                                     doloremque impedit numquam. Nam cupiditate illo earum.
@@ -155,14 +157,14 @@
         
                         <div class='border'></div>
         
-                        <section class="main__row2-tree-section">
-                            <div class="section-item1">
+                        <section class="education__section">
+                            <div class="education__item1">
                                 <h2>UX DESIGNER COURSE</h2>
                                 <span> JUN 2012 - MAY 2013 | CRAFTY UNIVERSITY</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
-                            <div class="section-item2">
+                            <div class="education__item2">
                                 <p>
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
                                     doloremque impedit numquam. Nam cupiditate illo earum.
@@ -172,14 +174,14 @@
         
                         <div class='border'></div>
         
-                        <section class="main__row2-tree-section">
-                            <div class="section-item1 reverce1">
+                        <section class="education__section">
+                            <div class="education__item1 education__item1_reverce">
                                 <h2> INTERFACE DESIGNING</h2>
                                 <span> KHELTAM UNIVERSITY | AUG 2014 - JUN 2015</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
-                            <div class="section-item2 reverce-1">
+                            <div class="education__item1 education__item2_reverce">
                                 <p>
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
                                     doloremque impedit numquam. Nam cupiditate illo earum.
@@ -189,22 +191,22 @@
         
                         <div class='border-top-bottom'></div>
         
-                        <div class="main__end-tree"></div>
+                        <div class="tree__end"></div>
         
-                    </div><!-- main__row2-tree -->
-                </div><!-- main__row2_education -->
+                    </div><!-- education__tree -->
+                </div><!--education -->
             </div> <!-- container -->
-        </section> <!-- end of class "section" -->
+        </section> <!-- section education -->
 
 
         
         <section class="section">
-            <div class="container bg-dark">
-                <div class="main__row3_work">
-                    <h1 class="main__row-title">WORK EXPERIENCE</h1>
-                    <div class="main__row3_top-icon"><i class="fas fa-landmark"></i></div>
-                    <div class="row3__wrapper">
-                        <ul class = "left-tree">
+            <div class="container container_bgd-dark">
+                <div class="work" id="work">
+                    <h1 class="container__title" >ОПЫТ РАБОТЫ</h1>
+                    <div class="work__top-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="work__tree_wrapper">
+                        <ul class = "work__leftTree">
                             <li>
                                 <h2>GRAFICS DESIGNER </h2>
                                 <span>JAN 2009 - MAY 2010 | CREATIVE ALIEN</span>
@@ -228,10 +230,10 @@
                                 <div class="icon"><i class="far fa-dot-circle"></i></div>
                             </li>
                             
-                        </ul> <!-- left-tree -->
+                        </ul> <!-- work__leftTree -->
     
     
-                        <ul class="right-tree">
+                        <ul class="work__rightTree">
                             <li>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quas sit ut nam mollitia
                                     doloremque impedit numquam. Nam cupiditate illo earum.
@@ -251,33 +253,116 @@
                                 <span>DIVERGENT STUDIO | AUG 2014 - JUN 2015</span>
                             </li>
                             
-                        </ul> <!-- right-tree -->                   
+                        </ul> <!-- work__rightTree -->                   
                     
-                    </div> <!-- ro3__wrapper -->
+                    </div> <!-- work__wrapper -->
     
-                    <div class="main__end-tree"></div>
+                    <div class="tree__end"></div>
     
-                </div> <!-- /main__row3_work -->
-            </div> <!-- /container -->
+                </div> <!-- work -->
+            </div> <!-- container -->
         </section> <!-- end of class "section" -->
 
 
         <section class="section">
-            <div class="container bg-gray">
-                <div class="main__row4_profSkill">
-                    <h1 class="main__row-title">PROFESSIONAL SKILLS</h1>
-                    <div class="skills">
-                       <div class="scale"><div></div></div>
+            <div class="container container_bgd-gray">
+                <div class="profSkill" id="skills">
+                    <h1 class="container__title" >ПРОФЕССИОНАЛЬНЫЕ НАВЫКИ</h1>
 
-                    </div>
-                </div> <!--main__row4_profSkill  -->
+                    <div class="profSkill__items">
+                        <div class="profSkill__card">
+                            <h2>СТРОИТЕЛЬНОЕ ПРОЕКТИРОВАНИЕ</h2>
+                            <img src="./img/building.jpg" alt="">
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication autoCad">
+                                    <div class = "dot"></div>                                    
+                                </div>                                
+                            </div>
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication sCad">
+                                    <div class = "dot"></div>
+                                </div>                                
+                            </div>
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication base">
+                                    <div class = "dot"></div>
+                                </div>                                
+                            </div>                 
+                        </div>
+
+                        <div class="profSkill__card">
+                            <h2>ВЕБ РАЗРАБОТКА</h2>
+                            <img src="./img/web.jpg" alt="">
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication html">
+                                    <div class = "dot"></div>                                    
+                                </div>                                
+                            </div>
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication css">
+                                    <div class = "dot"></div>
+                                </div>                                
+                            </div>
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication js">
+                                    <div class = "dot"></div>
+                                </div>                                
+                            </div>                 
+                        </div>
+
+                        <div class="profSkill__card">
+                            <h2>РАБОЧИЕ НАВЫКИ</h2>
+                            <img src="./img/mont.jpg" alt="">
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication skill-1">
+                                    <div class = "dot"></div>                                    
+                                </div>                                
+                            </div>
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication skill-2">
+                                    <div class = "dot"></div>
+                                </div>                                
+                            </div>
+
+                            <div class="profSkill__card_scale">
+                                <div class = "indication skill-3">
+                                    <div class = "dot"></div>
+                                </div>                                
+                            </div>                 
+                        </div>                      
+
+                    </div> <!-- profSkill__items -->
+
+                </div> <!--profSkill  -->
             </div> <!-- container -->
         </section>
 
+        <section class="section">
+            <div class="container">
+                <div class="contact" id="contact">
+                    <h1 class="container__title">Контакт</h1>
+                    <form action="" class="contact__form">
+                        <label for="contact__form"><input type="text"></label>
+                        <label for="contact__form"><input type="email" name="email" id="mail"></label>
+                    </form>
+                </div><!-- contact -->
+                
+            </div> <!-- container -->
+        </section> <!-- section -->
 
 
 
 
+
+        <div id="up"><a href="#header"><i class="fas fa-angle-up"></i></a> </i></div>
 
     </main>
 

@@ -36,3 +36,33 @@
     
     
 }
+
+@mixin cardIndication( $height, $bgd,$posRel,$fntSz,$posAbslt,$posTop,$posRight,$posLeft ) {
+  
+    height: $height;
+    background: $bgd;
+    position: $posRel;
+    font-size: $fntSz;
+
+    &::after{
+        position:$posAbslt ;
+        top: $posTop;
+        right: $posRight;
+    }
+
+    &::before{
+        position:$posAbslt ;
+        top: $posTop;
+        left: $posLeft;
+    }    
+}
+
+@mixin skillName($width,$skillName) {
+    width: $width; // percentage value
+    &::before {
+        content: $skillName;
+    }
+    &::after {
+        content:'#{$width}';
+    }
+}

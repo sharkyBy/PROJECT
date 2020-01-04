@@ -16,5 +16,16 @@ function clickBtn(event){
     }
     
 }
+
+let next = document.getElementById('nextBtn');
+next.addEventListener('click',clickNext);
+let angle = 0;
+
+function clickNext(event){
+    let card = document.querySelector('.profSkill__items');
+    console.log(card);
+    angle += 120;
+    card.setAttribute("style", `transform: rotateY(${angle}deg)`);
+}
    
 
