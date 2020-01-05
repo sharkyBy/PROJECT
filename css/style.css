@@ -22,7 +22,7 @@ html {
   min-width: 300px;
   color: white;
   background-blend-mode: soft-light;
-  background: url(../img/img1.png), linear-gradient(90deg, #1ad799 0%, #2febe2 100%);
+  background: url(../img/img1.png), linear-gradient(to right, #1ad799 0%, #2febe2 100%);
   background-size: cover;
 }
 
@@ -60,12 +60,14 @@ html {
 }
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  max-width: 1140px;
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: space-between;
+  z-index: 3;
 }
 
 .header__social {
@@ -167,6 +169,7 @@ html {
   height: 30px;
   transform-origin: 100% 50%;
   transition: visibility linear 1s;
+  z-index: 10;
 }
 .header__nav-menu-active:nth-child(1) {
   transform: rotate(0deg);
@@ -220,7 +223,7 @@ html {
   margin: 140px auto;
   font-size: 4vw;
   font-weight: 700;
-  background: linear-gradient(90deg, #1ad799 0%, #2febe2 100%);
+  background: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -316,10 +319,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.35s linear;
+  transition: background 0.3s linear;
 }
 .aboutMe__myInterests-icon div:hover {
-  background: linear-gradient(90deg, #1ad799 0%, #2febe2 100%);
+  background: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
   transition: 0.3s linear;
 }
 .aboutMe__myInterests-icon div:hover ~ span, .aboutMe__myInterests-icon div:hover i {
@@ -579,7 +582,7 @@ section:last-of-type .border {
 
 .indication {
   height: 100%;
-  background: linear-gradient(90deg, #1ad799 0%, #2febe2 100%);
+  background: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
   position: relative;
   font-size: 14px;
 }
@@ -692,6 +695,112 @@ section:last-of-type .border {
 }
 .skill-3::after {
   content: "95%";
+}
+
+.contact {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.contact__form {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.contact__form div {
+  position: relative;
+  flex: 1 1 300px;
+  height: 30px;
+  margin: 0 20px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  z-index: 0;
+}
+.contact__form div:first-child::after, .contact__form div:nth-child(2)::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+}
+.contact__form div:first-child::after {
+  content: "NAME";
+}
+.contact__form div:nth-child(2)::after {
+  content: "EMAIL";
+}
+
+.clickInput {
+  position: relative;
+}
+.clickInput::after {
+  top: -30px !important;
+  color: #1ad799 !important;
+  transition: all 0.3s linear;
+}
+
+input[type=text], input[type=email], textarea {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  outline-style: none;
+  position: relative;
+  z-index: 1;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
+  border-image-slice: 1;
+}
+
+input[type=text], input[type=email] {
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+}
+
+textarea {
+  width: 100%;
+  margin: 20px;
+  resize: none;
+}
+textarea::placeholder {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+}
+textarea:focus::placeholder {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#submit {
+  margin: 50px auto 0;
+  width: 150px;
+  height: 40px;
+  outline-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  background: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
+  border-image-slice: 1;
+}
+#submit:hover {
+  box-shadow: 0 0 3px 3px #1ad799;
+  transition: 0.2s ease-in;
 }
 
 #up {

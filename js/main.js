@@ -17,6 +17,24 @@ function clickBtn(event){
     
 }
 
+//The input name animation
+
+let form = document.getElementsByTagName('form')[0];
+let input = form.querySelectorAll('input');
+
+for( let i =0; i < input.length;i++){
+    input[i].onfocus = function(e){
+        form.children[i].classList.add('clickInput')
+        console.log(e.target);
+    }
+}
+
+
+
+
+
+// для вращения 3д карточек 
+/* 
 let next = document.getElementById('nextBtn');
 next.addEventListener('click',clickNext);
 let angle = 0;
@@ -26,6 +44,6 @@ function clickNext(event){
     console.log(card);
     angle += 120;
     card.setAttribute("style", `transform: rotateY(${angle}deg)`);
-}
+} */
    
 

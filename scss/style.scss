@@ -62,12 +62,15 @@ html{
 }
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  max-width: 1140px;
+  
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: space-between;
+  z-index: 3;
 }
 
 .header__social {
@@ -190,6 +193,7 @@ html{
   height: 30px;
   transform-origin: 100% 50%;
   transition: visibility linear 1s;
+  z-index: 10;
 
   &:nth-child(1) {
     transform: rotate(0deg);
@@ -367,10 +371,10 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background .35s linear;
+    transition:  background .3s linear;
 
     &:hover {
-      background: $bgd-row1;
+      background:$bgd-row1;
       transition: .3s linear;
     }
 
@@ -703,23 +707,10 @@ section:last-of-type .border {
 }
 
 
-.indication {    
-  height: 100%;
-  background: $bgd-row1;
-  position: relative;
-  font-size: 14px;
+.indication { 
+  
+  @include cardIndication( $height:100%, $bgd:$bgd-row1,$posRel:relative,$fntSz:14px,$posAbslt:absolute,$posTop:-30px,$posRight:-5%,$posLeft:0 )
 
-  &::after {
-    position: absolute;
-    top: -30px;
-    right: -5%;     
-  }
-    
-  &::before{
-    position: absolute;
-    top: -30px;
-    left: 0;     
-  }    
 }
 
 .dot{
@@ -768,6 +759,146 @@ section:last-of-type .border {
 .skill-3{
   @include skillName(95%,'Чтение чертежей');
 }
+
+
+// ************  contacts ************************
+
+.contact{
+  @include classRow (flex, column wrap, 100%, 1140px, 0 auto);  
+
+  &__form{
+    
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  
+    margin-bottom: 100px; 
+  
+
+    div{
+      position: relative;
+      flex: 1 1 300px;
+      height: 30px;
+      margin: 0 20px; 
+      color: rgba(255, 255, 255,.3);
+      font-weight: 300; 
+      z-index: 0;
+      
+      
+
+      &:first-child::after, &:nth-child(2)::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 14px;        
+        
+      }
+
+      &:first-child::after{
+        content: 'NAME';
+      }
+      &:nth-child(2)::after{
+        content: 'EMAIL';
+      }
+       
+    }
+  }   
+}
+
+.clickInput{
+  position: relative;
+  
+
+
+  &::after{
+    top: -30px !important;  
+    color: $colorTitle1 !important;
+    transition: all  0.3s linear;
+  }   
+}
+
+
+    input[type = text], input[type = email],textarea{
+      
+      background: transparent;
+      color: rgba(255, 255, 255,.7);
+      font-size: 16px;
+      font-weight: 300;
+      font-family: $fntFam;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255,.3);
+      outline-style: none; 
+      position: relative;
+      z-index: 1;
+      
+
+        &:focus{
+        border-bottom:1px solid transparent;
+        border-image: $bgd-row1;        
+        border-image-slice: 1;
+        
+        }
+
+    }
+    
+    input[type = text], input[type = email]{
+          
+      width: 100%;
+      min-width: 300px;
+      height: 100%;
+      
+    }
+
+    textarea{
+      width: 100%;
+      margin: 20px;              
+      resize: none;
+      
+      &::placeholder{
+        font-size: 14px;
+        font-family: $fntFam;
+        color: rgba(255, 255, 255,.3);
+        font-weight: 300;
+      }
+
+      &:focus::placeholder{
+        opacity: 0; 
+        transition: all 0.5s ease;
+      }
+      
+    }
+
+    
+#submit{
+  margin: 50px auto 0;
+  width: 150px;
+  height: 40px;
+  outline-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  // текст с градиентом
+  background: $bgd-row1; // background color;
+  -webkit-background-clip: text; // background color only for text
+  -webkit-text-fill-color: transparent; // fill color characters of text - transparent 
+
+  // рамка с градиентом
+  border-bottom:2px solid transparent;
+  border-image: $bgd-row1;        
+  border-image-slice: 1;
+
+
+  &:hover{
+    box-shadow: 0 0 3px 3px $colorTitle1;
+    transition:  .2s ease-in;
+  }
+
+ }
+ 
+
+
 
 #up{
   width: 40px;

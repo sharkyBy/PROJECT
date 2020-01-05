@@ -37,7 +37,7 @@
                         <div class = ""><a href="#education">Образование</a></div>
                         <div class = ""><a href="#work">Опыт работы</a></div>
                         <div class = ""><a href="#skills">Навыки</a></div>
-                        <div class = ""><a href="#">Контакт</a></div>
+                        <div class = ""><a href="#contact">Контакт</a></div>
                     </div>
 
                 </div> <!-- header__nav -->
@@ -47,7 +47,7 @@
             <div class="header__title">
                 <h1>Привет!</h1>
                 <h2>Меня зовут Валентин</h2>
-                <h4>Строительное проектировани, веб разработка</h4>
+                <h4>Строительное проектирование, веб разработка</h4>
             </div>
             
         </div>
@@ -346,13 +346,20 @@
         </section>
 
         <section class="section">
-            <div class="container">
+            <div class="container container_bgd-dark">
                 <div class="contact" id="contact">
-                    <h1 class="container__title">Контакт</h1>
-                    <form action="" class="contact__form">
-                        <label for="contact__form"><input type="text"></label>
-                        <label for="contact__form"><input type="email" name="email" id="mail"></label>
-                    </form>
+                    <h1 class="container__title" >Контакт</h1>
+                    
+                        <form action="mailto:valik_1973@mail.ru" enctype="text/plain" class="contact__form" name = "post">
+                            <div ><input type="text"  class="input"></div>
+                            <div ><input type="email" name="email" id="mail" class="input" ></div>
+                            <textarea name="message" id="msg" cols="0" rows="10" placeholder="MESSAGE" maxlength="400"></textarea>
+                    
+                            <input type="submit" id = 'submit'>
+
+                           
+                        </form>
+                                     
                 </div><!-- contact -->
                 
             </div> <!-- container -->
