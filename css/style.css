@@ -25,7 +25,6 @@ html {
   background: url(../img/img1.png), linear-gradient(to right, #1ad799 0%, #2febe2 100%);
   background-size: cover;
 }
-
 .header__container {
   display: flex;
   flex-flow: column wrap;
@@ -37,7 +36,6 @@ html {
   font-family: "Open Sans", sans-serif;
   color: white;
 }
-
 .header__title {
   margin: 20vw 0;
 }
@@ -58,18 +56,6 @@ html {
   font-weight: 300;
   user-select: none;
 }
-
-.nav {
-  position: sticky;
-  top: 0;
-  max-width: 1140px;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 3;
-}
-
 .header__social {
   width: 50%;
   display: flex;
@@ -101,7 +87,6 @@ html {
 .header__social .fab {
   font-size: 24px;
 }
-
 .header__nav {
   width: 50%;
   display: flex;
@@ -209,6 +194,16 @@ html {
   color: rgba(50, 60, 70, 0.9);
   transition: color 0.3s linear;
 }
+.header .nav {
+  position: sticky;
+  top: 0;
+  max-width: 1140px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
 
 .main {
   position: relative;
@@ -219,7 +214,6 @@ html {
 
 .container {
   width: 100%;
-  max-width: 100%;
   height: auto;
   font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.7);
@@ -253,6 +247,7 @@ html {
   flex: 1 1 0;
   position: relative;
   margin-top: 160px;
+  margin-left: 30px;
 }
 .aboutMe__photo-border {
   width: 66%;
@@ -278,7 +273,7 @@ html {
   height: auto;
 }
 .aboutMe__section_aboutMe {
-  margin: 140px 0;
+  margin: 140px 30px;
   flex: 1 1 0;
   min-width: 300px;
 }
@@ -290,7 +285,7 @@ html {
 }
 .aboutMe__section_aboutMe h6 {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   color: #1ad799;
 }
 .aboutMe__section_aboutMe h6 span {
@@ -306,7 +301,8 @@ html {
 }
 .aboutMe__myInterests h1 {
   flex: 1 1 100%;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  position: relative;
 }
 .aboutMe__myInterests .fas,
 .aboutMe__myInterests .fab {
@@ -327,15 +323,24 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s linear;
+}
+.aboutMe__myInterests-icon div:hover .briefly {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.4s linear, visibility 0.4s linear;
 }
 .aboutMe__myInterests-icon div:hover {
-  background: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
+  background: #1ad799;
+  transition: all 0.4s linear;
 }
 .aboutMe__myInterests-icon div:hover ~ span, .aboutMe__myInterests-icon div:hover i {
   opacity: 1;
   visibility: visible;
-  color: rgba(255, 255, 255, 0.7);
-  transition: all 0.35s linear;
+  transition: all 0.4s linear;
+}
+.aboutMe__myInterests-icon div:hover i {
+  color: rgba(50, 60, 70, 0.9);
 }
 .aboutMe__myInterests-icon span {
   display: block;
@@ -343,7 +348,23 @@ html {
   opacity: 0;
   margin-top: 20px;
   text-align: center;
-  transition: 0.55s opacity, 0.55s visibility;
+  transition: all 0.4s linear;
+}
+.aboutMe__myInterests-icon .briefly {
+  position: absolute;
+  left: -50%;
+  top: -90%;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  height: 80px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0% 90%, 0% 0%);
+  color: rgba(50, 60, 70, 0.9);
+  background: #1ad799;
+  border: 1px solid #1ad799;
+  z-index: 2;
+  transition: opacity 0.4s linear, visibility 0.4s linear;
 }
 
 /* *************  block 'Education' *********** */
@@ -712,22 +733,29 @@ section:last-of-type .border {
 }
 .contact__form {
   width: 94%;
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 100px;
 }
+.contact__form div:first-child, .contact__form div:nth-child(2) {
+  width: calc(50% - 20px * 2);
+  height: 30px;
+}
+.contact__form div:nth-child(3) {
+  margin-top: 60px;
+  width: 100%;
+}
 .contact__form div {
   position: relative;
-  flex: 1 1 300px;
-  height: 30px;
-  margin: 0 20px;
+  margin: 30px 20px;
   color: rgba(255, 255, 255, 0.3);
   font-weight: 300;
-  z-index: 0;
+  min-width: 260px;
 }
-.contact__form div:first-child::after, .contact__form div:nth-child(2)::after {
+.contact__form div::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -738,6 +766,9 @@ section:last-of-type .border {
 }
 .contact__form div:nth-child(2)::after {
   content: "EMAIL";
+}
+.contact__form div:nth-child(3)::after {
+  content: "MESSAGE";
 }
 
 .clickInput {
@@ -769,24 +800,12 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 
 input[type=text], input[type=email] {
   width: 100%;
-  min-width: 300px;
   height: 100%;
 }
 
 textarea {
   width: 100%;
-  margin: 20px;
   resize: none;
-}
-textarea::placeholder {
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  color: rgba(255, 255, 255, 0.3);
-  font-weight: 300;
-}
-textarea:focus::placeholder {
-  opacity: 0;
-  transition: all 0.5s ease;
 }
 
 #submit {
@@ -798,12 +817,7 @@ textarea:focus::placeholder {
   cursor: pointer;
   background: transparent;
   color: #1ad799;
-  transition: all 0.1s ease-in;
-  /* // текст с градиентом
-   background: $bgd-row1; // background color;
-   -webkit-background-clip: text; // background color only for text
-   -webkit-text-fill-color: transparent; // fill color characters of text - transparent 
-  */
+  transition: all 0.2s ease-in;
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
   border-image-slice: 1;
@@ -811,6 +825,7 @@ textarea:focus::placeholder {
 #submit:hover {
   background: linear-gradient(45deg, rgba(26, 215, 153, 0.8) 0%, rgba(47, 235, 226, 0.8) 100%);
   box-shadow: 0 0 3px 3px #1ad799;
+  transition: color 0.2s ease-in;
   color: #22252c;
 }
 
@@ -819,7 +834,7 @@ textarea:focus::placeholder {
   height: 40px;
   position: fixed;
   top: 90vh;
-  right: 4vw;
+  left: 94vw;
   background: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
   transition: all 0.3s linear;
   z-index: 5;
@@ -847,6 +862,70 @@ textarea:focus::placeholder {
 #up:hover i {
   transform: translateY(-3px);
   transition: 0.3s linear;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1400px;
+  min-width: 300px;
+}
+.footer__container {
+  width: 100%;
+  height: auto;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer__info {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0;
+  user-select: none;
+}
+.footer__social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #1ad799;
+  border-radius: 50%;
+  color: #1ad799;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+.footer__social a:hover {
+  border: transparent;
+  background: #1ad799;
+  color: #313741;
+  transition: all 0.2s linear;
+}
+.footer__social .fab {
+  font-size: 24px;
+}
+.footer hr {
+  width: 100%;
+  height: 1px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.5;
+  margin: 50px 0;
+}
+.footer p {
+  word-spacing: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

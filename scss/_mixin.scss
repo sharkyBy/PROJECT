@@ -17,9 +17,8 @@
     color: $color;  
 } 
 
-@mixin classContainer ($width, $maxWidth, $height, $fntFam,  $color) {
-    width: $width;
-    max-width: $maxWidth;
+@mixin classContainer ($width,  $height, $fntFam,  $color) {
+    width: $width;    
     height: $height;    
     font-family: $fntFam;    
     color: $color;
