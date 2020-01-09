@@ -57,11 +57,11 @@ html {
   user-select: none;
 }
 .header__social {
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  margin: auto 0;
+  margin: auto 0 auto 30px;
   user-select: none;
 }
 .header__social a {
@@ -88,7 +88,8 @@ html {
   font-size: 24px;
 }
 .header__nav {
-  width: 50%;
+  width: 30%;
+  margin-right: 30px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -249,6 +250,27 @@ html {
   margin-top: 160px;
   margin-left: 30px;
 }
+.aboutMe__photo #download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0 0 90px;
+  width: 180px;
+  height: 50px;
+  text-decoration: none;
+  color: #1ad799;
+  transition: all 0.2s ease-in;
+  font-weight: 300;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #1ad799 0%, #2febe2 100%);
+  border-image-slice: 1;
+}
+.aboutMe__photo #download:hover {
+  background: linear-gradient(90deg, rgba(26, 215, 153, 0.8) 0%, rgba(47, 235, 226, 0.8) 100%);
+  box-shadow: 0 0 3px 3px #1ad799;
+  transition: color 0.2s ease-in;
+  color: #22252c;
+}
 .aboutMe__photo-border {
   width: 66%;
   min-width: 240px;
@@ -268,7 +290,7 @@ html {
 }
 .aboutMe__photo-bgd img {
   display: block;
-  min-width: 250px;
+  min-width: 240px;
   width: 100%;
   height: auto;
 }
@@ -284,7 +306,7 @@ html {
   line-height: 1.5;
 }
 .aboutMe__section_aboutMe h6 {
-  margin-top: 20px;
+  margin-top: 16px;
   font-size: 16px;
   color: #1ad799;
 }
@@ -297,11 +319,12 @@ html {
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .aboutMe__myInterests h1 {
-  flex: 1 1 100%;
-  margin-bottom: 40px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
   position: relative;
 }
 .aboutMe__myInterests .fas,
@@ -313,6 +336,7 @@ html {
 .aboutMe__myInterests-icon {
   width: 100px;
   height: 200px;
+  margin: 0 50px;
 }
 .aboutMe__myInterests-icon div {
   position: relative;
@@ -355,6 +379,7 @@ html {
   left: -50%;
   top: -90%;
   text-align: center;
+  font-weight: 300;
   visibility: hidden;
   opacity: 0;
   width: 200px;
@@ -810,8 +835,8 @@ textarea {
 
 #submit {
   margin: 50px auto 0;
-  width: 150px;
-  height: 40px;
+  width: 180px;
+  height: 50px;
   outline-style: none;
   text-transform: uppercase;
   cursor: pointer;
