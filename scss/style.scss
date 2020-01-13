@@ -1,14 +1,10 @@
 // ** Mixins ******
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../font/webfonts');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @import '_mixin';
 @import '_variables';
+@import 'media';
 
 
 
@@ -64,6 +60,7 @@ html{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    
     margin: auto 0 auto 30px;
     user-select: none;  
   
@@ -111,6 +108,9 @@ html{
       cursor: pointer;
       transition: all .2s linear;
       z-index: 3;
+
+      
+     
   
       &:hover {
         border: transparent;
@@ -124,14 +124,16 @@ html{
     &_btn,
     &_btn::before,
     &_btn::after {
-      transition: all 0.2s ease-in;
-      width: 40px;
+      width:40px;     
       height:3px;
-      position: absolute;
-      
-      left: 50%; margin-left: -20px;
+
+      position: absolute;      
+      left: 50%; margin-left:-20px ;
       top:50%; margin-top: -1.5px;
+
       background: white;
+      transition: all 0.2s ease-in;
+      z-index: 3;
     }
     
     &_btn{
@@ -151,8 +153,10 @@ html{
     
       
       &-active {
+        position: relative;
         border: transparent;
         background: $bgd-icon;
+        z-index: 3;
       }
   
       &-active .header__nav_btn {        
@@ -177,22 +181,25 @@ html{
   &_menu {
     position: absolute;
     top: 120px;
-    right: 0px;
-    width: 260px;
-    height: 260px;
+    right: 30px;
+    width: 160px;
+    height: 160px;
     visibility: hidden;
+    
+   
     
   
     &-active {
       visibility: visible;
       position: absolute;
-      top: -30px;
-      right: 0;
-      width: 260px;
+      top: -80px;
+      right:35px;
+      width: 200px;
       height: 30px;
       transform-origin: 100% 50%;
       transition: transform linear 1s;
-      z-index: 5;
+      z-index: 0;
+     
     
       &:nth-child(1) {
         transform: rotate(0deg);
@@ -294,16 +301,16 @@ html{
 
   
   &__photo{
-    flex: 1 1 0;
-    position: relative;
+    flex: 1 1 0;    
     margin-top: 160px;
     margin-left: 30px;
+    
 
     #download {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 100px  0 0  90px;
+      margin: 100px 0 0  90px;
       width: 180px;
       height: 50px;      
       text-decoration: none;      
@@ -331,7 +338,7 @@ html{
     min-width: 240px;
     min-height: 240px;
     padding-top: 66%; //устанавливаем соотношение сторон при респонсиве  
-
+    position: relative;
     border: 4px solid rgba(26, 215, 153, 1);
     margin-left: 50px;
     z-index: 1;
@@ -339,11 +346,11 @@ html{
 
   &__photo-bgd{
     position: absolute;
-    top: 38px;
-    left: 0;
+    top: 40px;
+    left: -40px;
     background: rgba(0, 0, 0, 1);
     z-index: 2;
-    width: 68%;
+    width: 100%; 
 
     img {
       display: block;
@@ -386,7 +393,7 @@ html{
     justify-content: center;
   
   
-    h1 {
+    h2 {
       width: 100%;      
       text-align: center;
       margin-bottom: 100px;
@@ -480,23 +487,26 @@ html{
 
 /* *************  block 'Education' *********** */
 
-.education {
+.container {
+
+  &__education,
+  &__work {
   @include classRow (flex, column wrap, 100%, 1140px, 0 auto);
-  height: auto;
+  height: auto;}
 
   &__tree {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;    
     
   }
 
   &__section {
     display: flex;
-    flex-direction: column nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
     height: 0;
 
     .center {
@@ -513,6 +523,7 @@ html{
   }
 
   &__item1 {
+    display: block;
     flex: 1 1 0;
     padding: 0 15px;
     line-height: 1.5;
@@ -560,9 +571,9 @@ html{
 
 
 
-} // education
 
-.circle {
+
+  &__treeTop {
   margin: 0 auto;
   width: 70px;
   height: 70px;
@@ -585,7 +596,7 @@ html{
   }
 }
 
-.border-top-bottom {
+  &__treeTrunkTop {
   width: 3px;
   height: 100px;
   background: $colorText2;
@@ -593,19 +604,19 @@ html{
   margin: 0 auto;
 }
 
-.border {
+  &__treeTrunk {
   width: 3px;
   height: 150px;
   background: $colorText2;
   z-index: 1;
 }
 
-section:last-of-type .border {
+section:last-of-type .container__treeTrunk {
   height: 250px;
 }
 
 
-.tree__end {      
+  &__treeEnd {      
     display: block;
     margin: 0 auto;
     width: 20px;
@@ -616,6 +627,8 @@ section:last-of-type .border {
     margin-bottom: 120px;  
 
 }
+
+} // container
 
 
 /* ****** block  work ************************** */
@@ -645,7 +658,7 @@ section:last-of-type .border {
   &__tree_wrapper {
     margin: 0 auto;
     display: flex;
-    width: 80%;
+    width: 90%;
     height: 680px;
   }
 
@@ -892,8 +905,6 @@ section:last-of-type .border {
        
 
     }
-
-   
 
   }   
 }

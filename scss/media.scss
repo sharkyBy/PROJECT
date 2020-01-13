@@ -1,0 +1,221 @@
+@import '_variables';
+
+@media screen and (max-width:720px) {
+    .header {
+        &__social {
+            justify-content: center;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 1px solid $colorTitle2;
+            border-radius: 50%;
+            z-index: 2;
+
+
+
+            &-active {
+                border: transparent;
+                background: $bgd-icon;
+                color: $colorTitle2;
+                transition: transform .2s linear;
+
+                &::before {
+
+                    transform: rotate(180deg);
+                    transition: transform .2s linear;
+                }
+            }
+
+            &:hover {
+                border: transparent;
+                background: $bgd-icon;
+                color: $colorTitle2;
+                transition: all .2s linear;
+            }
+
+            &::before {
+                content: '\25BC';
+                font-size: 20px;
+                transition: transform .2s linear;
+            }
+
+            a {
+
+                position: absolute;
+                z-index: 0;
+                visibility: hidden;
+
+
+
+            }
+
+            &-media {
+
+                visibility: visible !important;
+                transition: all .2s linear;
+
+                &:nth-child(1) {
+                    transform: translateX(150%);
+                    transition: all .2s linear .1s;
+                }
+
+                &:nth-child(2) {
+                    transform: translate(100%, 100%);
+                    transition: all .2s linear .2s;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(150%);
+                    transition: all .3s linear .3s;
+                }
+            }
+        }
+
+
+        &__nav {
+            &_wrap {
+                width: 50px;
+                height: 50px;
+            }
+
+            &_btn,
+            &_btn::before,
+            &_btn::after {
+                width: 25px;
+                margin-left: -12.5px;
+            }
+
+            &_btn::before {
+                transform: translateY(-8px);
+            }
+
+            &_btn::after {
+                transform: translateY(8px);
+            }
+        }
+
+    }
+
+
+    .aboutMe {
+        &__photo {
+            flex: 0 1 100%;
+
+            &-border {
+                margin: auto;
+            }
+
+            #download {
+                margin: 100px auto;
+            }
+        }
+
+        &__section_aboutMe {
+            flex: 0 1 100%;
+            margin: 0 30px 80px;
+
+        }
+    }
+
+
+    .container {
+        &__title {
+            font-size:5vw;
+        }
+        &__item1,
+        &__item1_reverce {
+            h2 {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        &__work {
+
+            &__leftTree,
+            &__rightTree {
+                h2 {
+                    font-size: 18px;
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+// max-width 720px
+
+@media screen and (max-width:640px) {
+    .container {
+        &__title {
+            margin: 70px auto;
+            font-size: 5vw !important;
+        }
+
+        &__treeTop,
+        &__treeTrunkTop,
+        &__treeTrunk,
+        &__center,
+        &__treeEnd {
+            display: none;
+        }
+
+        &__section {
+            flex-direction: column;
+            height: auto !important;
+            margin-bottom: 50px;
+
+        }        
+
+        &__item1,
+        &__item2,
+        &__item1_reverce,
+        &__item2_reverce {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center !important;
+
+        }
+
+        &__item1_reverce {
+            order: -1;
+        }
+
+        &__item2_reverce {
+            order: 1
+        }
+
+        &__item1,
+        &__item1_reverce {
+            margin-top: 30px;
+        }
+    }
+
+
+
+
+
+        .contact__form {
+            div {
+                width: 100% !important;
+            }
+        }
+}
+
+
+@media screen and (max-width:575px) {
+    .container {
+        &__title {
+            font-size: 24px !important;
+        }
+    }
+}

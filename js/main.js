@@ -5,6 +5,20 @@ console.log(btn);
 btn.addEventListener('click',clickBtn);
 let menu = document.getElementsByClassName('header__nav_menu')[0];
 console.log(menu);
+window.addEventListener('scroll',scroll);
+function scroll (e) {
+    console.log('scroll');
+    if(window.scrollY > 600){
+    if(btn.classList.contains('header__nav_btn-active')){       
+        btn.classList.remove('header__nav_btn-active');
+            for(let i = 0; i < menu.children.length; i++){             
+                menu.children[i].classList.remove('header__nav_menu-active');                    
+            } 
+        }        
+    }
+    console.log(`scroll position on top = ${window.pageYOffset}`)
+}
+
 
 
 function clickBtn(event){    
@@ -18,6 +32,30 @@ function clickBtn(event){
     
 }
 
+// header__social btn
+
+let social = document.getElementsByClassName("header__social")[0];
+console.log(social)
+social.addEventListener('click',socialBtn);
+
+function socialBtn(event) {
+    this.classList.toggle("header__social-active");
+    if (window.getComputedStyle(social).width == '50px') {
+        console.log('width == 50px') ;
+        
+        for(let i = 0; i < social.children.length; i++) {
+            console.log(social.children[i]);
+            social.children[i].classList.toggle('header__social-media');
+        }
+        
+    }else {
+        console.log('width != 50px')
+    }
+
+
+    }
+   
+    
 
 
 //The input name animation

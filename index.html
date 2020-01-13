@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
     <script defer src="./js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./font/css/all.min.css">
@@ -18,8 +19,8 @@
             <div class="nav" >
                 <div class="header__social">
                     
-                    <a href="https://t.me/valikPet" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="https://www.facebook.com/valikPet" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a  href="https://t.me/valikPet" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a  href="https://www.facebook.com/valikPet" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a  href="viber://chat?number=+375297218280" target="_blank"><i class="fab fa-viber"></i></a>
                     
                     
@@ -61,9 +62,13 @@
             <div class="container container_bgd-dark">
                 <div class="aboutMe" id="aboutMe">
                     <div class="aboutMe__photo">
-                        <div class="aboutMe__photo-border"></div>
-                        <div class="aboutMe__photo-bgd"><img src="./img/myPhoto.jpg" alt=""></div>
-                        <a href="http://" target="_blank" id = "download" rel="autor" download="download">Скачать резюме</a>
+                        <div class="aboutMe__photo-border">
+                            <div class="aboutMe__photo-bgd">
+                                <img src="./img/myPhoto.jpg" alt="">
+                            </div>
+                        </div>
+                        
+                        <a href="./resume/resume.doc" target="_blank" id = "download" rel="autor" download="download">Скачать резюме</a>
                     </div>
     
                     <section class="aboutMe__section_aboutMe">
@@ -87,7 +92,7 @@
     
                     </section>
                     <section class="aboutMe__myInterests">
-                        <h1>МОИ УВЛЕЧЕНИЯ</h1>
+                        <h2>МОИ УВЛЕЧЕНИЯ</h2>
                         <div class="aboutMe__myInterests-icon">
                             
                             <div>
@@ -128,24 +133,24 @@
 
         <section class="section">
             <div class="container container_bgd-gray">
-                <div class="education" id="education" >
+                <div class="container__education" id="education" >
                     <h1 class="container__title">ОБРАЗОВАНИЕ</h1>
 
-                    <div class="circle"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="container__treeTop"><i class="fas fa-graduation-cap"></i></div>
         
-                    <div class='border-top-bottom'></div>
+                    <div class='container__treeTrunkTop'></div>
         
-                    <div class="education__tree">        
+                    <div class="container__tree">        
         
-                        <section class="education__section">
-                            <div class="education__item1">
+                        <section class="container__section">
+                            <div class="container__item1">
                                 <h2> СРЕДНЕЕ ОБРАЗОВАНИЕ</h2>
                                 <span> СЕНТЯБРЬ 1980 - МАЙ 1990 | СРЕДНЯЯ ШКОЛА №17</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
 
-                            <div class="education__item2">
+                            <div class="container__item2">
                                 <p>
                                     Среднее образование получено в СШ №17 г.Бреста. Аттестат об окончании
                                     средней школы имеет средний балл 4,5 (по 5-ти бальной системе).
@@ -153,16 +158,16 @@
                             </div>
                         </section>
         
-                        <div class='border'></div>
+                        <div class='container__treeTrunk'></div>
         
-                        <section class="education__section">
-                            <div class="education__item1 education__item1_reverce">
+                        <section class="container__section">
+                            <div class="container__item1_reverce">
                                 <h2> ТЕХНИК-СТРОИТЕЛЬ</h2>
                                 <span> БРЕСТСКИЙ ПОЛИТЕХНИЧЕСКИЙ ТЕХНИКУМ | АВГУСТ 1996 - ИЮНЬ 1999</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
-                            <div class="education__item1 education__item2_reverce">
+                            <div class="container__item2_reverce">
                                 <p>
                                     Поступил на заочное отделение Брестского политехнического техникума на факультет
                                     "Промышленное и гражданское строительство". 
@@ -171,16 +176,16 @@
                             </div>
                         </section>
         
-                        <div class='border'></div>
+                        <div class='container__treeTrunk'></div>
         
-                        <section class="education__section">
-                            <div class="education__item1">
+                        <section class="container__section">
+                            <div class="container__item1">
                                 <h2>ИНЖЕНЕР-СТРОИТЕЛЬ</h2>
                                 <span> АВГУСТ 1999- ИЮЛЬ 2005 | БРЕСТСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
-                            <div class="education__item2">
+                            <div class="container__item2">
                                 <p>
                                     По окончании техникума поступил на заочное отделение Брестского государственного 
                                     технического университета на факультет "Промышленное и гражданское строительство". 
@@ -188,16 +193,16 @@
                             </div>
                         </section>
         
-                        <div class='border'></div>
+                        <div class='container__treeTrunk'></div>
         
-                        <section class="education__section">
-                            <div class="education__item1 education__item1_reverce">
-                                <h2>ВЕБ РАЗРАБОТЧИК</h2>
+                        <section class="container__section">
+                            <div class="container__item1_reverce">
+                                <h2>ВЕБ-РАЗРАБОТЧИК</h2>
                                 <span> MyIT | СЕНТЯБРЬ 2019 - ДЕКАБРЬ 2019</span>
                             </div>
         
                             <div class="center"> <i class="far fa-dot-circle"></i> </div>
-                            <div class="education__item1 education__item2_reverce">
+                            <div class="container__item2_reverce">
                                 <p>
                                    Курсы подготовки по направлению "Веб-разработка". Получены
                                    базовые знания в HTML5, CSS3, JavaScript. В настоящее время совершенствую полученные знания
@@ -206,18 +211,112 @@
                             </div>
                         </section>
         
-                        <div class='border-top-bottom'></div>
+                        <div class='container__treeTrunk'></div>
         
-                        <div class="tree__end"></div>
+                        <div class="container__treeEnd"></div>
         
-                    </div><!-- education__tree -->
-                </div><!--education -->
+                    </div><!-- container__tree -->
+                </div><!--container__education -->
             </div> <!-- container -->
         </section> <!-- section education -->
 
 
+
+
         
         <section class="section">
+            <div class="container container_bgd-dark">
+                <div class="container__work" id="work" >
+                    <h1 class="container__title">ОПЫТ РАБОТЫ</h1>
+
+                    <div class="container__treeTop"><i class="fas fa-graduation-cap"></i></div>
+        
+                    <div class='container__treeTrunkTop'></div>
+        
+                    <div class="container__tree">        
+        
+                        <section class="container__section">
+                            <div class="container__item1">
+                                <h2> КОМАНДИР ОТДЕЛЕНИЯ</h2>
+                                <span> АВГУСТ 1995 - НОЯБРЬ 2005 | БРЕСТСКИЙ ГОРОДСКОЙ ОТДЕЛ ПО ЧС</span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+
+                            <div class="container__item2">
+                                <p>
+                                    Проходил службу в органах Министерства по ЧС республики Беларусь на должности
+                                    командира отделения. Параллельно обучался на заочном отделении БПТ и БрГТУ. 
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='container__treeTrunk'></div>
+        
+                        <section class="container__section">
+                            <div class="container__item1_reverce">
+                                <h2> ИНЖЕНЕР-КОНСТРУКТОР</h2>
+                                <span>  "НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР" Г.БРЕСТ | НОЯБРЬ 2006 - НОЯБРЬ 2016</span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+                            <div class="container__item2_reverce">
+                                <p>
+                                    Полученные за годы обучения знания применял и совершенствовал в проектной организации. 
+                                    Работал на должностях "инженер-конструктор", "начальник сектора", "начальник отдела".
+
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='container__treeTrunk'></div>
+        
+                        <section class="container__section">
+                            <div class="container__item1">
+                                <h2>МОНТАЖНИК</h2>
+                                <span> НОЯБРЬ 2016 -  СЕНТЯБРЬ 2019 | ФИРМА "MAZUR" POLSKA</span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+                            <div class="container__item2">
+                                <p>
+                                    В период кризиса вынужден искать оплачиваемую работу. В результате оказался в Польше,
+                                    где работал на производстве и монтаже водных атракционов для аквапарков.
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='container__treeTrunk'></div>
+        
+                        <section class="container__section">
+                            <div class="container__item1_reverce">
+                                <h2>ВЕБ-РАЗРАБОТЧИК</h2>
+                                <span> ДЕКАБРЬ 2019 | ФРИЛАНС </span>
+                            </div>
+        
+                            <div class="center"> <i class="far fa-dot-circle"></i> </div>
+                            <div class="container__item2_reverce">
+                                <p>
+                                    Наверное, "веб-разработчик" пока громко сказано, так как я в начале пути. 
+                                    Но, надеюсь, в скором будущем смогу смело сказать - " я - веб-разработчик"
+                                </p>
+                            </div>
+                        </section>
+        
+                        <div class='container__treeTrunk'></div>
+        
+                        <div class="container__treeEnd"></div>
+        
+                    </div><!-- work__tree -->
+                </div><!--work -->
+            </div> <!-- container -->
+        </section> <!-- section work -->
+
+
+
+        <!-- Вариант с абсолютным поизционированием строк  -->
+        
+    <!-- <section class="section">
             <div class="container container_bgd-dark">
                 <div class="work" id="work">
                     <h1 class="container__title" >ОПЫТ РАБОТЫ</h1>
@@ -249,10 +348,10 @@
                                 <div class="icon"><i class="far fa-dot-circle"></i></div>
                             </li>
                             
-                        </ul> <!-- work__leftTree -->
+                        </ul> -->  <!-- work__leftTree -->
     
     
-                        <ul class="work__rightTree">
+                        <!-- ul class="work__rightTree">
                             <li>
                                 <p>
                                     Проходил службу в органах Министерства по ЧС республики Беларусь на должности
@@ -270,19 +369,19 @@
                                 </p>
                                 </li>
                             <li>
-                                <h2>ВЕБ РАЗРАБОТЧИК</h2>
+                                <h2>ВЕБ-РАЗРАБОТЧИК</h2>
                                 <span>ДЕКАБРЬ 2019 | ФРИЛАНС </span>
                             </li>
                             
-                        </ul> <!-- work__rightTree -->                   
+                        </ul> --> <!-- work__rightTree -->                   
                     
-                    </div> <!-- work__wrapper -->
+                    <!-- </div> --> <!-- work__wrapper -->
     
-                    <div class="tree__end"></div>
+                    <!-- <div class="tree__end"></div> -->
     
-                </div> <!-- work -->
-            </div> <!-- container -->
-        </section> <!-- end of class "section" -->
+                <!-- </div> --> <!-- work -->
+            <!-- </div> --> <!-- container -->
+        <!-- </section> -->  <!-- section__work --> 
 
 
         <section class="section">
@@ -369,7 +468,7 @@
         <section class="section">
             <div class="container container_bgd-dark">
                 <div class="contact" id="contact">
-                    <h1 class="container__title" >Контакт</h1>
+                    <h1 class="container__title" >КОНТАКТ</h1>
                     
                         <form action="mailto:valik_1973@mail.ru" enctype="text/plain" class="contact__form" name = "post">
                             <div>
